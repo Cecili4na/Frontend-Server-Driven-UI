@@ -1,0 +1,239 @@
+[data-header] {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+[data-header-search-top-container] {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  [data-header-search-top-container] {
+    display: flex;
+  }
+}
+
+[data-header-top-menu] {
+  gap: 24px;
+}
+
+[data-header-top-menu-link] {
+  text-decoration: none;
+  color: #666;
+  display: flex;
+  align-items: center;
+}
+
+[data-header-top-menu-link]:hover {
+  color: #c8102e;
+}
+
+[data-header-top-menu-link] svg {
+  width: 14px;
+  height: 14px;
+}
+
+[data-header-container] {
+  max-width: 1280px;
+  margin: 0 auto;
+  height: 80px;
+  padding: 0 24px 0 0;
+  display: flex;
+  align-items: flex-end;
+}
+
+[data-header-logo] {
+  text-decoration: none;
+  margin-left: -15px;
+  margin-right: 48px;
+  padding-left: 0;
+}
+
+[data-header-logo-img] {
+  width: 83.48px;
+  height: auto;
+}
+
+[data-header-nav] {
+  display: none;
+  flex: 1;
+  justify-content: center;
+  align-items: flex-end;
+ 
+}
+
+@media (min-width: 768px) {
+  [data-header-nav] {
+    display: flex;
+  }
+
+  [data-header-nav] > * {
+    justify-content: center;
+  }
+}
+
+[data-header-nav-links] {
+  gap: 32px;
+}
+
+[data-header-nav-link] {
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 8px 0;
+  color: #000000;
+}
+
+[data-header-nav-link] * {
+  color: #000000;
+}
+
+[data-header-nav-link]:not([data-header-nav-link="highlight"]):hover {
+  color: #000000;
+}
+
+[data-header-nav-link]:not([data-header-nav-link="highlight"]):hover * {
+  color: #000000;
+}
+
+[data-header-nav-link="highlight"] {
+  color: #c8102e;
+  cursor: pointer;
+}
+
+[data-header-nav-link="highlight"]:hover {
+  color: #c8102e;
+}
+
+[data-header-nav-link="highlight"] * {
+  color: #c8102e;
+}
+
+[data-header-dropdown-icon] {
+  width: 10px;
+  height: 10px;
+  margin-left: 2px;
+}
+
+[data-header-search-container] {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  [data-header-search-container] {
+    display: flex;
+  }
+}
+
+[data-header-search-wrapper] {
+  position: relative;
+}
+
+[data-header-search-input] {
+  width: 100%;
+  height: 42px;
+  padding: 0 60px 0 12px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  outline: none;
+}
+
+[data-header-search-input]::placeholder {
+  color: #999;
+}
+
+[data-header-search-button] {
+  position: absolute;
+  right: 12px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+[data-header-search-button]:hover {
+  color: #c8102e;
+}
+
+[data-header-icon-button]:hover {
+  color: #c8102e;
+}
+
+[data-header-cart-link] {
+  text-decoration: none;
+  color: inherit;
+}
+
+[data-header-menu-toggle-input] {
+  display: none;
+}
+
+[data-header-menu-toggle-label] {
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  [data-header-menu-toggle-label] {
+    display: block;
+  }
+}
+
+[data-header-menu-toggle]:hover {
+  color: #c8102e;
+}
+
+[data-header-menu-icon-close] {
+  display: none;
+}
+
+#menu-toggle:checked ~ [data-header-menu-toggle-label] [data-header-menu-toggle] [data-header-menu-icon-open] {
+  display: none;
+}
+
+#menu-toggle:checked ~ [data-header-menu-toggle-label] [data-header-menu-toggle] [data-header-menu-icon-close] {
+  display: block;
+}
+
+#menu-toggle:checked ~ [data-header-mobile-nav] {
+  display: flex;
+}
+
+[data-header-mobile-nav] {
+  display: none;
+  background-color: #ffffff;
+  border-top: 1px solid var(--sl-color-border-base, #e5e5e5);
+  padding: var(--sl-space-4) var(--sl-space-6);
+}
+
+@media (min-width: 768px) {
+  [data-header-mobile-nav] {
+    display: none !important;
+  }
+  
+  [data-header-menu-toggle-label] {
+    display: none;
+  }
+}
+
+[data-header-mobile-nav-link] {
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--sl-color-border-base, #f0f0f0);
+}
+
+[data-header-mobile-nav-link]:hover {
+  color: #c8102e;
+}
+
+[data-header-mobile-nav-link]:last-child {
+  border-bottom: none;
+}
