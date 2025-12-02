@@ -2,16 +2,14 @@ import {
   Flex,
   Link,
   IconButton,
-  IconUser,
-  IconShoppingCartSimple,
-  IconList,
-  IconX,
   IconMagnifyingGlass,
   IconMapPin,
   IconHeadset,
-  IconHeart,
   IconArrowDown,
   IconCloudArrowUp,
+  IconUser,
+  IconHeart,
+  IconShoppingCartSimple,
   Text,
   Container,
 } from '@vtex/shoreline'
@@ -24,6 +22,12 @@ const topMenuItems = [
   { label: 'Atendimento', href: '/atendimento', icon: 'headset' as const },
 ]
 
+const topMenuIcons = [
+  { href: '/conta', icon: 'user' as const },
+  { href: '/favoritos', icon: 'heart' as const },
+  { href: '/carrinho', icon: 'cart' as const },
+]
+
 const mainMenuItems = [
   { label: 'Novidades', href: '/novidades', hasDropdown: true, isHighlight: false },
   { label: 'Calçados', href: '/calcados', hasDropdown: true, isHighlight: false },
@@ -31,14 +35,14 @@ const mainMenuItems = [
   { label: 'Acessórios', href: '/acessorios', hasDropdown: true, isHighlight: false },
   { label: 'Estilos', href: '/estilos', hasDropdown: true, isHighlight: false },
   { label: 'Clássicos', href: '/classicos', hasDropdown: true, isHighlight: false },
-  { label: 'Black Friday', href: '/black-friday', hasDropdown: true, isHighlight: true },
+  { label: 'Outlet', href: '/outlet', hasDropdown: true, isHighlight: true },
 ]
 
 export const Header = () => {
   return (
     <header data-header>
       <Container data-header-container>
-        <Flex align="flex-end" justify="space-between" gap="48">
+        <Flex align="flex-end" justify="space-between" >
           <Link href="/" data-header-logo data-testid="ta-logotipo">
             <img src={logoImg} alt="VANS" data-header-logo-img />
           </Link>
@@ -82,6 +86,13 @@ export const Header = () => {
                     </Flex>
                   </Link>
                 ))}
+                {topMenuIcons.map((item) => (
+                  <Link key={item.href} href={item.href} data-header-top-menu-link>
+                    {item.icon === 'user' && <IconUser />}
+                    {item.icon === 'heart' && <IconHeart />}
+                    {item.icon === 'cart' && <IconShoppingCartSimple />}
+                  </Link>
+                ))}
               </Flex>
 
               <Flex align="center" data-header-search-container>
@@ -100,48 +111,6 @@ export const Header = () => {
                 </Flex>
               </Flex>
             </Flex>
-
-            <IconButton
-              asChild
-              label="My Account"
-              data-header-icon-button
-            >
-              <Link href="/conta">
-                <IconUser />
-              </Link>
-            </IconButton>
-
-            <IconButton
-              asChild
-              label="Wishlist"
-              data-header-icon-button
-            >
-              <Link href="/wishlist">
-                <IconHeart />
-              </Link>
-            </IconButton>
-
-            <IconButton
-              asChild
-              label="Cart"
-              data-header-icon-button
-              data-header-cart-button
-            >
-              <Link href="/carrinho" data-header-cart-link>
-                <Flex align="center" gap="2">
-                  <IconShoppingCartSimple />
-                  <Text variant="caption2" data-header-cart-count>(0)</Text>
-                </Flex>
-              </Link>
-            </IconButton>
-
-            <input type="checkbox" id="menu-toggle" data-header-menu-toggle-input />
-            <label htmlFor="menu-toggle" data-header-menu-toggle-label>
-              <Flex data-header-menu-toggle>
-                <IconList data-header-menu-icon-open />
-                <IconX data-header-menu-icon-close />
-              </Flex>
-            </label>
           </Flex>
         </Flex>
       </Container>
