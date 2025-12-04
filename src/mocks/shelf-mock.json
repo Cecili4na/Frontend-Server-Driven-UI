@@ -1,0 +1,250 @@
+{
+  "card": {
+    "log_id": "shelf-mock",
+    "states": [
+      {
+        "state_id": 0,
+        "div": {
+          "type": "custom",
+          "custom_type": "shoreline-container",
+          "custom_props": {
+            "data-shelf-container": true
+          },
+          "items": [
+            {
+              "type": "custom",
+              "custom_type": "shoreline-flex",
+              "custom_props": {
+                "justify": "center",
+                "data-shelf-title-wrapper": true
+              },
+              "items": [
+                {
+                  "type": "custom",
+                  "custom_type": "shoreline-text",
+                  "custom_props": {
+                    "variant": "display4",
+                    "data-shelf-title": true
+                  },
+                  "text": "Produtos em Destaque"
+                }
+              ]
+            },
+            {
+              "type": "custom",
+              "custom_type": "shoreline-flex",
+              "custom_props": {
+                "gap": "24",
+                "wrap": "wrap",
+                "justify": "center",
+                "data-shelf-items": true
+              },
+              "items": [
+                {
+                  "type": "custom",
+                  "custom_type": "shoreline-link",
+                  "custom_props": {
+                    "href": "/produto/1",
+                    "data-shelf-item": true
+                  },
+                  "items": [
+                    {
+                      "type": "custom",
+                      "custom_type": "shoreline-flex",
+                      "custom_props": {
+                        "direction": "column",
+                        "gap": "8",
+                        "data-shelf-item-content": true
+                      },
+                      "items": [
+                        {
+                          "type": "image",
+                          "image_url": "/src/assets/images/tenis vans 1.jpg",
+                          "width": {
+                            "type": "fixed",
+                            "value": 200
+                          },
+                          "height": {
+                            "type": "fixed",
+                            "value": 200
+                          },
+                          "custom_props": {
+                            "data-shelf-item-image": true
+                          }
+                        },
+                        {
+                          "type": "custom",
+                          "custom_type": "shoreline-flex",
+                          "custom_props": {
+                            "direction": "column",
+                            "gap": "4",
+                            "align": "center",
+                            "data-shelf-item-info": true
+                          },
+                          "items": [
+                            {
+                              "type": "custom",
+                              "custom_type": "shoreline-text",
+                              "custom_props": {
+                                "variant": "body",
+                                "data-shelf-item-title": true
+                              },
+                              "text": "Tênis Vans 1"
+                            },
+                            {
+                              "type": "custom",
+                              "custom_type": "shoreline-text",
+                              "custom_props": {
+                                "variant": "body",
+                                "data-shelf-item-price": true
+                              },
+                              "text": "R$ 299,90"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "custom",
+                  "custom_type": "shoreline-link",
+                  "custom_props": {
+                    "href": "/produto/2",
+                    "data-shelf-item": true
+                  },
+                  "items": [
+                    {
+                      "type": "custom",
+                      "custom_type": "shoreline-flex",
+                      "custom_props": {
+                        "direction": "column",
+                        "gap": "8",
+                        "data-shelf-item-content": true
+                      },
+                      "items": [
+                        {
+                          "type": "image",
+                          "image_url": "/src/assets/images/tenis vans 2.jpg",
+                          "width": {
+                            "type": "fixed",
+                            "value": 200
+                          },
+                          "height": {
+                            "type": "fixed",
+                            "value": 200
+                          },
+                          "custom_props": {
+                            "data-shelf-item-image": true
+                          }
+                        },
+                        {
+                          "type": "custom",
+                          "custom_type": "shoreline-flex",
+                          "custom_props": {
+                            "direction": "column",
+                            "gap": "4",
+                            "align": "center",
+                            "data-shelf-item-info": true
+                          },
+                          "items": [
+                            {
+                              "type": "custom",
+                              "custom_type": "shoreline-text",
+                              "custom_props": {
+                                "variant": "body",
+                                "data-shelf-item-title": true
+                              },
+                              "text": "Tênis Vans 2"
+                            },
+                            {
+                              "type": "custom",
+                              "custom_type": "shoreline-text",
+                              "custom_props": {
+                                "variant": "body",
+                                "data-shelf-item-price": true
+                              },
+                              "text": "R$ 349,90"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "custom",
+                  "custom_type": "shoreline-link",
+                  "custom_props": {
+                    "href": "/produto/3",
+                    "data-shelf-item": true
+                  },
+                  "items": [
+                    {
+                      "type": "custom",
+                      "custom_type": "shoreline-flex",
+                      "custom_props": {
+                        "direction": "column",
+                        "gap": "8",
+                        "data-shelf-item-content": true
+                      },
+                      "items": [
+                        {
+                          "type": "image",
+                          "image_url": "/src/assets/images/tenis vans 3.jpg",
+                          "width": {
+                            "type": "fixed",
+                            "value": 200
+                          },
+                          "height": {
+                            "type": "fixed",
+                            "value": 200
+                          },
+                          "custom_props": {
+                            "data-shelf-item-image": true
+                          }
+                        },
+                        {
+                          "type": "custom",
+                          "custom_type": "shoreline-flex",
+                          "custom_props": {
+                            "direction": "column",
+                            "gap": "4",
+                            "align": "center",
+                            "data-shelf-item-info": true
+                          },
+                          "items": [
+                            {
+                              "type": "custom",
+                              "custom_type": "shoreline-text",
+                              "custom_props": {
+                                "variant": "body",
+                                "data-shelf-item-title": true
+                              },
+                              "text": "Tênis Vans 3"
+                            },
+                            {
+                              "type": "custom",
+                              "custom_type": "shoreline-text",
+                              "custom_props": {
+                                "variant": "body",
+                                "data-shelf-item-price": true
+                              },
+                              "text": "R$ 399,90"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "templates": {}
+}
+

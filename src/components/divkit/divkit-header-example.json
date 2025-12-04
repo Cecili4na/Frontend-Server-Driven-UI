@@ -1,0 +1,111 @@
+{
+  "card": {
+    "log_id": "header-example",
+    "states": [
+      {
+        "state_id": 0,
+        "div": {
+          "type": "custom",
+          "custom_type": "shoreline-container",
+          "custom_props": {
+            "data-header-container": true
+          },
+          "items": [
+            {
+              "type": "custom",
+              "custom_type": "shoreline-flex",
+              "custom_props": {
+                "align": "flex-end",
+                "justify": "space-between"
+              },
+              "items": [
+                {
+                  "type": "custom",
+                  "custom_type": "shoreline-link",
+                  "custom_props": {
+                    "href": "/",
+                    "data-header-logo": true
+                  },
+                  "items": [
+                    {
+                      "type": "image",
+                      "image_url": "/src/assets/images/vans_logo.jpg",
+                      "width": {
+                        "type": "fixed",
+                        "value": 100
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "custom",
+                  "custom_type": "shoreline-flex",
+                  "custom_props": {
+                    "gap": "24",
+                    "align": "center",
+                    "data-header-actions": true
+                  },
+                  "items": [
+                    {
+                      "type": "custom",
+                      "custom_type": "shoreline-link",
+                      "custom_props": {
+                        "href": "/app",
+                        "data-header-top-menu-link": true
+                      },
+                      "items": [
+                        {
+                          "type": "custom",
+                          "custom_type": "shoreline-flex",
+                          "custom_props": {
+                            "align": "center",
+                            "gap": "2"
+                          },
+                          "items": [
+                            {
+                              "type": "custom",
+                              "custom_type": "shoreline-icon",
+                              "custom_props": {
+                                "name": "cloudArrowUp"
+                              }
+                            },
+                            {
+                              "type": "custom",
+                              "custom_type": "shoreline-text",
+                              "custom_props": {
+                                "variant": "caption2"
+                              },
+                              "text": "Baixe o App"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "custom",
+                      "custom_type": "shoreline-link",
+                      "custom_props": {
+                        "href": "/conta",
+                        "data-header-top-menu-link": true
+                      },
+                      "items": [
+                        {
+                          "type": "custom",
+                          "custom_type": "shoreline-icon",
+                          "custom_props": {
+                            "name": "user"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "templates": {}
+}
