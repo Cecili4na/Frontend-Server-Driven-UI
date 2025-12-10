@@ -62,15 +62,21 @@ export async function fetchSDUIJson(
 
   const apiUrl = `${CONFIG.API_BASE_URL}/sdui/${componentName}`
   
+  console.log(`[SDUI] Tentando buscar ${componentName} de: ${apiUrl}`)
+  console.log(`[SDUI] FORCE_MOCK: ${CONFIG.FORCE_MOCK}, API_BASE_URL: ${CONFIG.API_BASE_URL}`)
+  
   try {
     const response = await fetchWithTimeout(apiUrl, CONFIG.TIMEOUT)
     
     if (response.ok) {
       const json = await response.json()
+      console.log(`[SDUI] ✅ JSON recebido da API para ${componentName}:`, json)
       return json
+    } else {
+      console.warn(`[SDUI] ⚠️ API retornou status ${response.status} para ${componentName}`)
     }
-  } catch (error) {
-    console.warn(`[SDUI] Backend não disponível para ${componentName}, usando fallback`)
+  } catch (error: any) {
+    console.warn(`[SDUI] ❌ Backend não disponível para ${componentName}:`, error?.message || error)
   }
 
   try {

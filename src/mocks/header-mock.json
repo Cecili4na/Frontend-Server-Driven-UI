@@ -1,146 +1,34 @@
 {
-  "card": {
-    "log_id": "header-mock",
-    "states": [
-      {
-        "state_id": 0,
-        "div": {
-          "type": "custom",
-          "custom_type": "shoreline-container",
-          "custom_props": {
-            "data-header-container": true
-          },
-          "items": [
-            {
-              "type": "custom",
-              "custom_type": "shoreline-flex",
-              "custom_props": {
-                "align": "flex-end",
-                "justify": "space-between"
-              },
-              "items": [
-                {
-                  "type": "custom",
-                  "custom_type": "shoreline-link",
-                  "custom_props": {
-                    "href": "/",
-                    "data-header-logo": true
-                  },
-                  "items": [
-                    {
-                      "type": "image",
-                      "image_url": "/src/assets/images/vans_logo.jpg",
-                      "width": {
-                        "type": "fixed",
-                        "value": 100
-                      }
-                    }
-                  ]
-                },
-                {
-                  "type": "custom",
-                  "custom_type": "shoreline-flex",
-                  "custom_props": {
-                    "gap": "24",
-                    "align": "center",
-                    "data-header-actions": true
-                  },
-                  "items": [
-                    {
-                      "type": "custom",
-                      "custom_type": "shoreline-link",
-                      "custom_props": {
-                        "href": "/app",
-                        "data-header-top-menu-link": true
-                      },
-                      "items": [
-                        {
-                          "type": "custom",
-                          "custom_type": "shoreline-flex",
-                          "custom_props": {
-                            "align": "center",
-                            "gap": "2"
-                          },
-                          "items": [
-                            {
-                              "type": "custom",
-                              "custom_type": "shoreline-icon",
-                              "custom_props": {
-                                "name": "cloudArrowUp"
-                              }
-                            },
-                            {
-                              "type": "custom",
-                              "custom_type": "shoreline-text",
-                              "custom_props": {
-                                "variant": "caption2"
-                              },
-                              "text": "Baixe o App"
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "custom",
-                      "custom_type": "shoreline-link",
-                      "custom_props": {
-                        "href": "/conta",
-                        "data-header-top-menu-link": true
-                      },
-                      "items": [
-                        {
-                          "type": "custom",
-                          "custom_type": "shoreline-icon",
-                          "custom_props": {
-                            "name": "user"
-                          }
-                        }
-                      ]
-                    },
-                    {
-                      "type": "custom",
-                      "custom_type": "shoreline-link",
-                      "custom_props": {
-                        "href": "/favoritos",
-                        "data-header-top-menu-link": true
-                      },
-                      "items": [
-                        {
-                          "type": "custom",
-                          "custom_type": "shoreline-icon",
-                          "custom_props": {
-                            "name": "heart"
-                          }
-                        }
-                      ]
-                    },
-                    {
-                      "type": "custom",
-                      "custom_type": "shoreline-link",
-                      "custom_props": {
-                        "href": "/carrinho",
-                        "data-header-top-menu-link": true
-                      },
-                      "items": [
-                        {
-                          "type": "custom",
-                          "custom_type": "shoreline-icon",
-                          "custom_props": {
-                            "name": "shoppingCartSimple"
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      }
-    ]
-  },
-  "templates": {}
+  "type": "react-component",
+  "component_name": "Header",
+  "props": {
+    "topMenuItems": [
+      { "label": "🔥 BACKEND FUNCIONANDO - Teste Realizado!", "href": "/app", "icon": "download" },
+      { "label": "Sua localização", "href": "/localizacao", "icon": "map" },
+      { "label": "Atendimento", "href": "/atendimento", "icon": "headset" }
+    ],
+    "topMenuIcons": [
+      { "href": "/conta", "icon": "user" },
+      { "href": "/favoritos", "icon": "heart" },
+      { "href": "/carrinho", "icon": "cart" }
+    ],
+    "mainMenuItems": [
+      { "label": "Novidades", "href": "/novidades", "hasDropdown": true, "isHighlight": false },
+      { "label": "Calçados", "href": "/calcados", "hasDropdown": true, "isHighlight": false },
+      { "label": "Roupas", "href": "/roupas", "hasDropdown": true, "isHighlight": false },
+      { "label": "Acessórios", "href": "/acessorios", "hasDropdown": true, "isHighlight": false },
+      { "label": "Estilos", "href": "/estilos", "hasDropdown": true, "isHighlight": false },
+      { "label": "Clássicos", "href": "/classicos", "hasDropdown": true, "isHighlight": false },
+      { "label": "Outlet", "href": "/outlet", "hasDropdown": true, "isHighlight": true }
+    ],
+    "shoreline": {
+      "textVariant": "action",
+      "topMenuTextVariant": "caption2",
+      "backgroundColor": "colors.white",
+      "textColor": "colors.neutral1000",
+      "linkColor": "colors.neutral600",
+      "borderColor": "colors.neutral1000",
+      "shadow": "shadows.base"
+    }
+  }
 }
-

@@ -16,19 +16,19 @@ import {
 import './header.css'
 import logoImg from '../../assets/images/vans_logo.jpg'
 
-const topMenuItems = [
+const defaultTopMenuItems = [
   { label: 'Baixe o App', href: '/app', icon: 'download' as const },
   { label: 'Sua localização', href: '/localizacao', icon: 'map' as const },
   { label: 'Atendimento', href: '/atendimento', icon: 'headset' as const },
 ]
 
-const topMenuIcons = [
+const defaultTopMenuIcons = [
   { href: '/conta', icon: 'user' as const },
   { href: '/favoritos', icon: 'heart' as const },
   { href: '/carrinho', icon: 'cart' as const },
 ]
 
-const mainMenuItems = [
+const defaultMainMenuItems = [
   { label: 'Novidades', href: '/novidades', hasDropdown: true, isHighlight: false },
   { label: 'Calçados', href: '/calcados', hasDropdown: true, isHighlight: false },
   { label: 'Roupas', href: '/roupas', hasDropdown: true, isHighlight: false },
@@ -38,7 +38,27 @@ const mainMenuItems = [
   { label: 'Outlet', href: '/outlet', hasDropdown: true, isHighlight: true },
 ]
 
-export const Header = () => {
+interface HeaderProps {
+  topMenuItems?: typeof defaultTopMenuItems
+  topMenuIcons?: typeof defaultTopMenuIcons
+  mainMenuItems?: typeof defaultMainMenuItems
+  shoreline?: {
+    textVariant?: 'body' | 'caption2' | 'action' | 'context' | 'emphasis' | 'caption1' | 'display1' | 'display2' | 'display3' | 'display4'
+    topMenuTextVariant?: 'body' | 'caption2' | 'action' | 'context' | 'emphasis' | 'caption1' | 'display1' | 'display2' | 'display3' | 'display4'
+    backgroundColor?: string
+    textColor?: string
+    linkColor?: string
+    borderColor?: string
+    shadow?: string
+  }
+}
+
+export const Header = ({ 
+  topMenuItems = defaultTopMenuItems,
+  topMenuIcons = defaultTopMenuIcons,
+  mainMenuItems = defaultMainMenuItems,
+  shoreline
+}: HeaderProps = {}) => {
   return (
     <header data-header>
       <Container data-header-container>

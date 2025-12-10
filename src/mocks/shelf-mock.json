@@ -1,250 +1,38 @@
 {
-  "card": {
-    "log_id": "shelf-mock",
-    "states": [
+  "type": "react-component",
+  "component_name": "Shelf",
+  "props": {
+    "title": "✅ TESTE BACKEND - Produtos em Destaque",
+    "items": [
       {
-        "state_id": 0,
-        "div": {
-          "type": "custom",
-          "custom_type": "shoreline-container",
-          "custom_props": {
-            "data-shelf-container": true
-          },
-          "items": [
-            {
-              "type": "custom",
-              "custom_type": "shoreline-flex",
-              "custom_props": {
-                "justify": "center",
-                "data-shelf-title-wrapper": true
-              },
-              "items": [
-                {
-                  "type": "custom",
-                  "custom_type": "shoreline-text",
-                  "custom_props": {
-                    "variant": "display4",
-                    "data-shelf-title": true
-                  },
-                  "text": "Produtos em Destaque"
-                }
-              ]
-            },
-            {
-              "type": "custom",
-              "custom_type": "shoreline-flex",
-              "custom_props": {
-                "gap": "24",
-                "wrap": "wrap",
-                "justify": "center",
-                "data-shelf-items": true
-              },
-              "items": [
-                {
-                  "type": "custom",
-                  "custom_type": "shoreline-link",
-                  "custom_props": {
-                    "href": "/produto/1",
-                    "data-shelf-item": true
-                  },
-                  "items": [
-                    {
-                      "type": "custom",
-                      "custom_type": "shoreline-flex",
-                      "custom_props": {
-                        "direction": "column",
-                        "gap": "8",
-                        "data-shelf-item-content": true
-                      },
-                      "items": [
-                        {
-                          "type": "image",
-                          "image_url": "/src/assets/images/tenis vans 1.jpg",
-                          "width": {
-                            "type": "fixed",
-                            "value": 200
-                          },
-                          "height": {
-                            "type": "fixed",
-                            "value": 200
-                          },
-                          "custom_props": {
-                            "data-shelf-item-image": true
-                          }
-                        },
-                        {
-                          "type": "custom",
-                          "custom_type": "shoreline-flex",
-                          "custom_props": {
-                            "direction": "column",
-                            "gap": "4",
-                            "align": "center",
-                            "data-shelf-item-info": true
-                          },
-                          "items": [
-                            {
-                              "type": "custom",
-                              "custom_type": "shoreline-text",
-                              "custom_props": {
-                                "variant": "body",
-                                "data-shelf-item-title": true
-                              },
-                              "text": "Tênis Vans 1"
-                            },
-                            {
-                              "type": "custom",
-                              "custom_type": "shoreline-text",
-                              "custom_props": {
-                                "variant": "body",
-                                "data-shelf-item-price": true
-                              },
-                              "text": "R$ 299,90"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "custom",
-                  "custom_type": "shoreline-link",
-                  "custom_props": {
-                    "href": "/produto/2",
-                    "data-shelf-item": true
-                  },
-                  "items": [
-                    {
-                      "type": "custom",
-                      "custom_type": "shoreline-flex",
-                      "custom_props": {
-                        "direction": "column",
-                        "gap": "8",
-                        "data-shelf-item-content": true
-                      },
-                      "items": [
-                        {
-                          "type": "image",
-                          "image_url": "/src/assets/images/tenis vans 2.jpg",
-                          "width": {
-                            "type": "fixed",
-                            "value": 200
-                          },
-                          "height": {
-                            "type": "fixed",
-                            "value": 200
-                          },
-                          "custom_props": {
-                            "data-shelf-item-image": true
-                          }
-                        },
-                        {
-                          "type": "custom",
-                          "custom_type": "shoreline-flex",
-                          "custom_props": {
-                            "direction": "column",
-                            "gap": "4",
-                            "align": "center",
-                            "data-shelf-item-info": true
-                          },
-                          "items": [
-                            {
-                              "type": "custom",
-                              "custom_type": "shoreline-text",
-                              "custom_props": {
-                                "variant": "body",
-                                "data-shelf-item-title": true
-                              },
-                              "text": "Tênis Vans 2"
-                            },
-                            {
-                              "type": "custom",
-                              "custom_type": "shoreline-text",
-                              "custom_props": {
-                                "variant": "body",
-                                "data-shelf-item-price": true
-                              },
-                              "text": "R$ 349,90"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "custom",
-                  "custom_type": "shoreline-link",
-                  "custom_props": {
-                    "href": "/produto/3",
-                    "data-shelf-item": true
-                  },
-                  "items": [
-                    {
-                      "type": "custom",
-                      "custom_type": "shoreline-flex",
-                      "custom_props": {
-                        "direction": "column",
-                        "gap": "8",
-                        "data-shelf-item-content": true
-                      },
-                      "items": [
-                        {
-                          "type": "image",
-                          "image_url": "/src/assets/images/tenis vans 3.jpg",
-                          "width": {
-                            "type": "fixed",
-                            "value": 200
-                          },
-                          "height": {
-                            "type": "fixed",
-                            "value": 200
-                          },
-                          "custom_props": {
-                            "data-shelf-item-image": true
-                          }
-                        },
-                        {
-                          "type": "custom",
-                          "custom_type": "shoreline-flex",
-                          "custom_props": {
-                            "direction": "column",
-                            "gap": "4",
-                            "align": "center",
-                            "data-shelf-item-info": true
-                          },
-                          "items": [
-                            {
-                              "type": "custom",
-                              "custom_type": "shoreline-text",
-                              "custom_props": {
-                                "variant": "body",
-                                "data-shelf-item-title": true
-                              },
-                              "text": "Tênis Vans 3"
-                            },
-                            {
-                              "type": "custom",
-                              "custom_type": "shoreline-text",
-                              "custom_props": {
-                                "variant": "body",
-                                "data-shelf-item-price": true
-                              },
-                              "text": "R$ 399,90"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
+        "id": "1",
+        "title": "Tênis Vans 1 - TESTE BACKEND",
+        "price": "R$ 199,90",
+        "imageUrl": "/src/assets/images/tenis vans 1.jpg",
+        "href": "/produto/1"
+      },
+      {
+        "id": "2",
+        "title": "Tênis Vans 2",
+        "price": "R$ 349,90",
+        "imageUrl": "/src/assets/images/tenis vans 2.jpg",
+        "href": "/produto/2"
+      },
+      {
+        "id": "3",
+        "title": "Tênis Vans 3",
+        "price": "R$ 399,90",
+        "imageUrl": "/src/assets/images/tenis vans 3.jpg",
+        "href": "/produto/3"
       }
-    ]
-  },
-  "templates": {}
+    ],
+    "shoreline": {
+      "titleVariant": "display4",
+      "itemTitleVariant": "body",
+      "priceVariant": "body",
+      "backgroundColor": "colors.white",
+      "textColor": "colors.neutral1000",
+      "linkColor": "colors.neutral1000"
+    }
+  }
 }
-
