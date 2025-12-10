@@ -8,6 +8,7 @@ import './shelf.css'
 import tenisVans1 from '../../assets/images/tenis vans 1.jpg'
 import tenisVans2 from '../../assets/images/tenis vans 2.jpg'
 import tenisVans3 from '../../assets/images/tenis vans 3.jpg'
+import { resolveImageUrl } from '../../utils/image-resolver'
 
 interface ShelfItem {
   id: string
@@ -62,7 +63,7 @@ export const Shelf = ({ title = 'Produtos em Destaque', items = defaultItems }: 
               <Flex direction="column" gap="8" data-shelf-item-content>
                 <div data-shelf-item-image-wrapper>
                   <img 
-                    src={item.imageUrl} 
+                    src={resolveImageUrl(item.imageUrl)} 
                     alt={item.title}
                     data-shelf-item-image
                   />
