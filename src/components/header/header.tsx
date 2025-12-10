@@ -15,6 +15,7 @@ import {
 } from '@vtex/shoreline'
 import './header.css'
 import logoImg from '../../assets/images/vans_logo.jpg'
+import { resolveShorelineToken } from '../../sdui/shoreline-config'
 
 const defaultTopMenuItems = [
   { label: 'Baixe o App', href: '/app', icon: 'download' as const },
@@ -59,8 +60,35 @@ export const Header = ({
   mainMenuItems = defaultMainMenuItems,
   shoreline
 }: HeaderProps = {}) => {
+  const headerStyle: React.CSSProperties = {}
+  const textVariant = shoreline?.textVariant || 'action'
+  const topMenuTextVariant = shoreline?.topMenuTextVariant || 'caption2'
+  
+  if (shoreline?.backgroundColor) {
+    headerStyle.backgroundColor = resolveShorelineToken(shoreline.backgroundColor)
+  }
+  
+  if (shoreline?.shadow) {
+    headerStyle.boxShadow = resolveShorelineToken(shoreline.shadow)
+  }
+  
+  const linkStyle: React.CSSProperties = {}
+  if (shoreline?.linkColor) {
+    linkStyle.color = resolveShorelineToken(shoreline.linkColor)
+  }
+  
+  const textStyle: React.CSSProperties = {}
+  if (shoreline?.textColor) {
+    textStyle.color = resolveShorelineToken(shoreline.textColor)
+  }
+  
+  const borderStyle: React.CSSProperties = {}
+  if (shoreline?.borderColor) {
+    borderStyle.borderColor = resolveShorelineToken(shoreline.borderColor)
+  }
+  
   return (
-    <header data-header>
+    <header data-header style={headerStyle}>
       <Container data-header-container>
         <Flex align="flex-end" justify="space-between" >
           <Link href="/" data-header-logo data-testid="ta-logotipo">
@@ -78,13 +106,13 @@ export const Header = ({
                       data-header-nav-link="highlight"
                     >
                       <Flex align="center" gap="2">
-                        <Text variant="action">{item.label}</Text>
+                        <Text variant={textVariant} style={textStyle}>{item.label}</Text>
                         {item.hasDropdown && <IconArrowDown data-header-dropdown-icon />}
                       </Flex>
                     </Link>
                   ) : (
-                    <Flex key={item.href} align="center" gap="2" data-header-nav-link>
-                      <Text variant="action">{item.label}</Text>
+                    <Flex key={item.href} align="center" gap="2" data-header-nav-link style={textStyle}>
+                      <Text variant={textVariant}>{item.label}</Text>
                       {item.hasDropdown && <IconArrowDown data-header-dropdown-icon />}
                     </Flex>
                   )
@@ -97,12 +125,12 @@ export const Header = ({
             <Flex direction="column" gap="6" align="flex-end" data-header-search-top-container>
               <Flex gap="24" align="center" data-header-top-menu>
                 {topMenuItems.map((item) => (
-                  <Link key={item.href} href={item.href} data-header-top-menu-link>
+                  <Link key={item.href} href={item.href} data-header-top-menu-link style={linkStyle}>
                     <Flex align="center" gap="2">
                       {item.icon === 'download' && <IconCloudArrowUp />}
                       {item.icon === 'map' && <IconMapPin />}
                       {item.icon === 'headset' && <IconHeadset />}
-                      <Text variant="caption2">{item.label}</Text>
+                      <Text variant={topMenuTextVariant}>{item.label}</Text>
                     </Flex>
                   </Link>
                 ))}
@@ -121,6 +149,7 @@ export const Header = ({
                     type="text"
                     placeholder="O que você procura?"
                     data-header-search-input
+                    style={{ ...borderStyle, borderColor: shoreline?.borderColor ? resolveShorelineToken(shoreline.borderColor) : undefined }}
                   />
                   <IconButton
                     label="Search"
@@ -142,8 +171,9 @@ export const Header = ({
               key={item.href}
               href={item.href}
               data-header-mobile-nav-link
+              style={linkStyle}
             >
-              <Text variant="action">{item.label}</Text>
+              <Text variant={textVariant} style={textStyle}>{item.label}</Text>
             </Link>
           ))}
         </Flex>
